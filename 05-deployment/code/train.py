@@ -132,8 +132,8 @@ print(f'auc={auc}')
 # Save the model
 
 # with open(output_file, 'wb') as f_out:
-    with open('model_C=1.0.bin', 'wb') as f_out:
-        pickle.dump((dv, model), f_out)
-         pickle.dump((dv, model), f_out)
+with open('model_C=1.0.bin', 'wb') as f_out:
+    pickle.dump((dv, model), f_out)
+         
 
 print(f'the model is saved to {output_file}')
