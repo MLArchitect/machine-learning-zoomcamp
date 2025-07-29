@@ -23,7 +23,8 @@ output_file = f'model_C={C}.bin'
 
 # data preparation
 
-df = pd.read_csv('data-week-3.csv')
+url = "https://raw.githubusercontent.com/maxim-eyengue/Python-Codes/refs/heads/main/ML_Zoomcamp_2024/05_deployment/code/zoomcamp/data-week-3.csv"
+df = pd.read_csv(url)
 
 df.columns = df.columns.str.lower().str.replace(' ', '_')
 
@@ -130,7 +131,9 @@ print(f'auc={auc}')
 
 # Save the model
 
-with open(output_file, 'wb') as f_out:
-    pickle.dump((dv, model), f_out)
+# with open(output_file, 'wb') as f_out:
+    with open('model_C=1.0.bin', 'wb') as f_out:
+        pickle.dump((dv, model), f_out)
+         pickle.dump((dv, model), f_out)
 
 print(f'the model is saved to {output_file}')
